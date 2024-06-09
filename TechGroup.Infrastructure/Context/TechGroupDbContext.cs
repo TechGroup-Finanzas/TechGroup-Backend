@@ -1,9 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Reflection.Metadata;
+using TechGroup.Infrastructure.TechGroup.Answers.Models;
+using TechGroup.Infrastructure.TechGroup.Products.Models;
+using TechGroup.Infrastructure.TechGroup.Questions.Models;
 using TechGroup.Infrastructure.TechGroup.Users.Models;
 
-namespace RoleplayApp.Infrastructure.Context
+namespace TechGroup.Infrastructure.Context
 {
     public class TechGroupDbContext : DbContext
     {
@@ -11,13 +14,19 @@ namespace RoleplayApp.Infrastructure.Context
         public TechGroupDbContext(DbContextOptions<TechGroupDbContext> options) : base(options) { }
 
         public DbSet<User> User { get; set; }
+        
+        public DbSet<Product> Product { get; set; }
+        
+        public DbSet<Question> Question { get; set; }
+        
+        public DbSet<Answer> Answer { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
-                optionsBuilder.UseMySql("Server=localhost,3306;Uid=root;Pwd=admin;Database=TechGroupDb", serverVersion);
+                optionsBuilder.UseMySql("Server=localhost,3306;Uid=root;Pwd=root1234;Database=TechGroupDb", serverVersion);
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -44,8 +53,39 @@ namespace RoleplayApp.Infrastructure.Context
             modelBuilder.Entity<User>().Property(u => u.Password).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<User>().Property(u => u.Dni).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<User>().Property(u => u.CreatedAt).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
+            
+            modelBuilder.Entity<Product>().ToTable("product");
+            modelBuilder.Entity<Product>().HasKey(p => p.Id);
+            modelBuilder.Entity<Product>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Product>().Property(p => p.Price).IsRequired().HasPrecision(2);
+            modelBuilder.Entity<Product>().Property(p => p.Amount).IsRequired();
+            modelBuilder.Entity<Product>().Property(p => p.CreatedAt).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
 
-
+            
+            modelBuilder.Entity<Question>().ToTable("question");
+            modelBuilder.Entity<Question>().HasKey(q => q.Id);
+            modelBuilder.Entity<Question>().Property(q => q.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Question>().Property(q => q.Title).IsRequired();
+            modelBuilder.Entity<Question>().Property(q => q.Description).IsRequired();
+            modelBuilder.Entity<Question>().HasOne(q => q.User)
+                .WithMany()            
+                .HasForeignKey(q => q.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Question>().Navigation(q => q.User).AutoInclude();
+            modelBuilder.Entity<Question>().Property(q => q.CreatedAt).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
+            
+            modelBuilder.Entity<Answer>().ToTable("answer");
+            modelBuilder.Entity<Answer>().HasKey(a => a.Id);
+            modelBuilder.Entity<Answer>().Property(a => a.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Answer>().Property(a => a.Description).IsRequired();
+            modelBuilder.Entity<Answer>().HasOne(a => a.Question)
+                .WithMany(q => q.Answers)
+                .HasForeignKey(a => a.QuestionId)
+                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Answer>().Navigation(a => a.Question).AutoInclude();
+            modelBuilder.Entity<Answer>().Property(a => a.CreatedAt).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
+            
         }
     }
 }

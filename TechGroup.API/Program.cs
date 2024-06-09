@@ -1,8 +1,20 @@
 using Microsoft.EntityFrameworkCore;
-using RoleplayApp.Infrastructure.Context;
+using TechGroup.Infrastructure.Context;
 using TechGroup.API.TechGroup.Mapper;
+using TechGroup.Domain.TechGroup.Answers.Interfaces;
+using TechGroup.Domain.TechGroup.Answers.Services;
+using TechGroup.Domain.TechGroup.Products.Interfaces;
+using TechGroup.Domain.TechGroup.Products.Services;
+using TechGroup.Domain.TechGroup.Questions.Interfaces;
+using TechGroup.Domain.TechGroup.Questions.Services;
 using TechGroup.Domain.TechGroup.Users.Interfaces;
 using TechGroup.Domain.TechGroup.Users.Services;
+using TechGroup.Infrastructure.TechGroup.Answers.Interfaces;
+using TechGroup.Infrastructure.TechGroup.Answers.Services;
+using TechGroup.Infrastructure.TechGroup.Products.Interfaces;
+using TechGroup.Infrastructure.TechGroup.Products.Services;
+using TechGroup.Infrastructure.TechGroup.Questions.Interfaces;
+using TechGroup.Infrastructure.TechGroup.Questions.Services;
 using TechGroup.Infrastructure.TechGroup.Users.Interfaces;
 using TechGroup.Infrastructure.TechGroup.Users.Services;
 
@@ -20,6 +32,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserInfrastructure, UserInfrastructure>();
 builder.Services.AddScoped<IUserDomain, UserDomain>();
 
+builder.Services.AddScoped<IProductInfrastructure, ProductInfrastructure>();
+builder.Services.AddScoped<IProductDomain, ProductDomain>();
+
+builder.Services.AddScoped<IAnswerInfrastructure, AnswerInfrastructure>();
+builder.Services.AddScoped<IAnswerDomain, AnswerDomain>();
+
+builder.Services.AddScoped<IQuestionInfrastructure, QuestionInfrastructure>();
+builder.Services.AddScoped<IQuestionDomain, QuestionDomain>();
 
 //cors
 builder.Services.AddCors(p =>
