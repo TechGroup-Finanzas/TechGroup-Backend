@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RoleplayApp.Infrastructure.Context;
+using TechGroup.Infrastructure.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;

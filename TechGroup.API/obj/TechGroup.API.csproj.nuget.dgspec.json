@@ -1,38 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.API\\TechGroup.API.csproj": {}
+    "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.API/TechGroup.API.csproj": {}
   },
   "projects": {
-    "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.API\\TechGroup.API.csproj": {
+    "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.API/TechGroup.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.API\\TechGroup.API.csproj",
+        "projectUniqueName": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.API/TechGroup.API.csproj",
         "projectName": "TechGroup.API",
-        "projectPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.API\\TechGroup.API.csproj",
-        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.API\\obj\\",
+        "projectPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.API/TechGroup.API.csproj",
+        "packagesPath": "/Users/leonardorodriguezrojas/.nuget/packages/",
+        "outputPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/leonardorodriguezrojas/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Domain\\TechGroup.Domain.csproj": {
-                "projectPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Domain\\TechGroup.Domain.csproj"
+              "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Domain/TechGroup.Domain.csproj": {
+                "projectPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Domain/TechGroup.Domain.csproj"
               },
-              "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Infrastructure\\TechGroup.Infrastructure.csproj": {
-                "projectPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Infrastructure\\TechGroup.Infrastructure.csproj"
+              "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Infrastructure/TechGroup.Infrastructure.csproj": {
+                "projectPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Infrastructure/TechGroup.Infrastructure.csproj"
               }
             }
           }
@@ -97,36 +95,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/leonardorodriguezrojas/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Domain\\TechGroup.Domain.csproj": {
+    "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Domain/TechGroup.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Domain\\TechGroup.Domain.csproj",
+        "projectUniqueName": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Domain/TechGroup.Domain.csproj",
         "projectName": "TechGroup.Domain",
-        "projectPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Domain\\TechGroup.Domain.csproj",
-        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Domain\\obj\\",
+        "projectPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Domain/TechGroup.Domain.csproj",
+        "packagesPath": "/Users/leonardorodriguezrojas/.nuget/packages/",
+        "outputPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/leonardorodriguezrojas/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Infrastructure\\TechGroup.Infrastructure.csproj": {
-                "projectPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Infrastructure\\TechGroup.Infrastructure.csproj"
+              "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Infrastructure/TechGroup.Infrastructure.csproj": {
+                "projectPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Infrastructure/TechGroup.Infrastructure.csproj"
               }
             }
           }
@@ -156,28 +152,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/leonardorodriguezrojas/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Infrastructure\\TechGroup.Infrastructure.csproj": {
+    "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Infrastructure/TechGroup.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Infrastructure\\TechGroup.Infrastructure.csproj",
+        "projectUniqueName": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Infrastructure/TechGroup.Infrastructure.csproj",
         "projectName": "TechGroup.Infrastructure",
-        "projectPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Infrastructure\\TechGroup.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos de programa\\Proyectos\\Universidad\\Finanzas\\TechGroup-Backend\\TechGroup.Infrastructure\\obj\\",
+        "projectPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Infrastructure/TechGroup.Infrastructure.csproj",
+        "packagesPath": "/Users/leonardorodriguezrojas/.nuget/packages/",
+        "outputPath": "/Users/leonardorodriguezrojas/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/leonardorodriguezrojas/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -231,7 +225,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/leonardorodriguezrojas/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
