@@ -1,14 +1,29 @@
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\bin\Debug\net8.0\TechGroup.Infrastructure.deps.json
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\bin\Debug\net8.0\TechGroup.Infrastructure.runtimeconfig.json
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\bin\Debug\net8.0\TechGroup.Infrastructure.dll
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\bin\Debug\net8.0\TechGroup.Infrastructure.pdb
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\TechGroup.Infrastructure.csproj.AssemblyReference.cache
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\TechGroup.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\TechGroup.Infrastructure.AssemblyInfoInputs.cache
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\TechGroup.Infrastructure.AssemblyInfo.cs
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\TechGroup.Infrastructure.csproj.CoreCompileInputs.cache
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\TechGroup.Infrastructure.dll
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\refint\TechGroup.Infrastructure.dll
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\TechGroup.Infrastructure.pdb
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\TechGroup.Infrastructure.genruntimeconfig.cache
-D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Infrastructure\obj\Debug\net8.0\ref\TechGroup.Infrastructure.dll
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/bin/Debug/net8.0/TechGroup.Infrastructure.deps.json
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/bin/Debug/net8.0/TechGroup.Infrastructure.runtimeconfig.json
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/bin/Debug/net8.0/TechGroup.Infrastructure.dll
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/bin/Debug/net8.0/TechGroup.Infrastructure.pdb
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.csproj.AssemblyReference.cache
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.AssemblyInfoInputs.cache
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.AssemblyInfo.cs
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.csproj.CoreCompileInputs.cache
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.dll
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/refint/TechGroup.Infrastructure.dll
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.pdb
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.genruntimeconfig.cache
+D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/ref/TechGroup.Infrastructure.dll
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/bin/Debug/net8.0/TechGroup.Infrastructure.deps.json
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/bin/Debug/net8.0/TechGroup.Infrastructure.runtimeconfig.json
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/bin/Debug/net8.0/TechGroup.Infrastructure.dll
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/bin/Debug/net8.0/TechGroup.Infrastructure.pdb
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.csproj.AssemblyReference.cache
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.AssemblyInfoInputs.cache
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.AssemblyInfo.cs
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.sourcelink.json
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.dll
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/refint/TechGroup.Infrastructure.dll
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.pdb
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/TechGroup.Infrastructure.genruntimeconfig.cache
+/Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Infrastructure/obj/Debug/net8.0/ref/TechGroup.Infrastructure.dll
