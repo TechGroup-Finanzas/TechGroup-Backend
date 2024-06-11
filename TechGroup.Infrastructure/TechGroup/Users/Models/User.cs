@@ -15,5 +15,7 @@ namespace TechGroup.Infrastructure.TechGroup.Users.Models
         public required string Password { get; set; }
         public required string Dni { get; set; }
         public DateOnly CreatedAt { get; set; }
+        public required string Phone { get; set;  }
+        public required string Photo { get; set;  }
     }
 }

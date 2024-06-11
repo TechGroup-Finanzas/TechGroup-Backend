@@ -26,7 +26,7 @@ namespace TechGroup.Infrastructure.Context
             if (!optionsBuilder.IsConfigured)
             {
                 var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
-                optionsBuilder.UseMySql("Server=localhost,3306;Uid=root;Pwd=root1234;Database=TechGroupDb", serverVersion);
+                optionsBuilder.UseMySql("Server=localhost,3306;Uid=root;Pwd=admin;Database=TechGroupDb", serverVersion);
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -53,6 +53,8 @@ namespace TechGroup.Infrastructure.Context
             modelBuilder.Entity<User>().Property(u => u.Password).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<User>().Property(u => u.Dni).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<User>().Property(u => u.CreatedAt).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
+            modelBuilder.Entity<User>().Property(u => u.Phone).IsRequired();
+            modelBuilder.Entity<User>().Property(u => u.Photo).IsRequired();
             
             modelBuilder.Entity<Product>().ToTable("product");
             modelBuilder.Entity<Product>().HasKey(p => p.Id);

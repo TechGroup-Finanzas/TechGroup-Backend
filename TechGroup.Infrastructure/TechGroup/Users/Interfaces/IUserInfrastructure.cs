@@ -11,6 +11,9 @@ namespace TechGroup.Infrastructure.TechGroup.Users.Interfaces
     {
         public Task<List<User>> GetAllAsync();
         public Task<User> GetByIdAsync(int id);
+
+        public Task<LoginResponse> LoginAsync(string email, string password);
+
         public Task<bool> CreateAsync(User user);
         public Task<bool> UpdateAsync(int id, User user);
         public Task<bool> DeleteAsync(int id);  
