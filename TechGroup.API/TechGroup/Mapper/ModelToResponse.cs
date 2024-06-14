@@ -14,9 +14,11 @@ namespace TechGroup.API.TechGroup.Mapper
                 .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
                 .ForMember(dest => dest.Dni, opt => opt.MapFrom(src => src.Dni))
-                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt));
-            
-            
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.Photo, opt => opt.MapFrom(src => src.Photo))
+                .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone));
+
+
             CreateMap<Product, ProductResponse>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
                 .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price))

@@ -19,6 +19,24 @@ namespace TechGroup.Infrastructure.TechGroup.Users.Services
             this.techGroupDbContext = techGroupDbContext;
         }
 
+        public async Task<LoginResponse> LoginAsync(string email, string password)
+        {
+            var user = await techGroupDbContext.User.FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
+            if (user == null)
+            {
+                return new LoginResponse
+                {
+                    Success = false,
+                    Message = "Invalid email or password"
+                };
+            }
+            return new LoginResponse
+            {
+                Success = true,
+                Message = "Login successful"
+            };
+        }   
+
         public async Task<bool> CreateAsync(User user)
         {
             await techGroupDbContext.AddAsync(user);

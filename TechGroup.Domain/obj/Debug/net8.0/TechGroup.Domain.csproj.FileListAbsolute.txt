@@ -29,3 +29,19 @@ D:/Archivos de programa/Proyectos/Universidad/Finanzas/TechGroup-Backend/TechGro
 /Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Domain/obj/Debug/net8.0/refint/TechGroup.Domain.dll
 /Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Domain/obj/Debug/net8.0/TechGroup.Domain.pdb
 /Users/rafaelprimo/Downloads/TechGroup-Backend/TechGroup.Domain/obj/Debug/net8.0/ref/TechGroup.Domain.dll
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\bin\Debug\net8.0\TechGroup.Domain.deps.json
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\bin\Debug\net8.0\TechGroup.Domain.dll
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\bin\Debug\net8.0\TechGroup.Domain.pdb
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\bin\Debug\net8.0\TechGroup.Infrastructure.dll
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\bin\Debug\net8.0\TechGroup.Infrastructure.pdb
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.csproj.AssemblyReference.cache
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.AssemblyInfoInputs.cache
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.AssemblyInfo.cs
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.csproj.CoreCompileInputs.cache
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.sourcelink.json
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.csproj.CopyComplete
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.dll
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\refint\TechGroup.Domain.dll
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\TechGroup.Domain.pdb
+D:\Archivos de programa\Proyectos\Universidad\Finanzas\TechGroup-Backend\TechGroup.Domain\obj\Debug\net8.0\ref\TechGroup.Domain.dll
