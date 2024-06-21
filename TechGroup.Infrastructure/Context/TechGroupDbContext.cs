@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Reflection.Metadata;
 using TechGroup.Infrastructure.TechGroup.Answers.Models;
 using TechGroup.Infrastructure.TechGroup.Products.Models;
+using TechGroup.Infrastructure.TechGroup.Purchases.Models;
 using TechGroup.Infrastructure.TechGroup.Questions.Models;
 using TechGroup.Infrastructure.TechGroup.Users.Models;
 
@@ -20,6 +21,8 @@ namespace TechGroup.Infrastructure.Context
         public DbSet<Question> Question { get; set; }
         
         public DbSet<Answer> Answer { get; set; }
+        
+        public DbSet<Purchase> Purchase { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -86,6 +89,21 @@ namespace TechGroup.Infrastructure.Context
             modelBuilder.Entity<Answer>().Navigation(a => a.Question).AutoInclude();
             modelBuilder.Entity<Answer>().Property(a => a.CreatedAt).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
             
+            modelBuilder.Entity<Purchase>().ToTable("purchase");
+            modelBuilder.Entity<Purchase>().HasKey(p => p.Id);
+            modelBuilder.Entity<Purchase>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Purchase>().Property(p => p.UserId).IsRequired();
+            modelBuilder.Entity<Purchase>().Property(p => p.Price).IsRequired().HasPrecision(2);
+            modelBuilder.Entity<Purchase>().Property(p => p.Amount).IsRequired().HasPrecision(2);
+            modelBuilder.Entity<Purchase>().Property(p=> p.DateRegister).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
+            modelBuilder.Entity<Purchase>().Property(p=> p.Interest).IsRequired();
+            modelBuilder.Entity<Purchase>().Property(p=> p.Status).IsRequired();
+            //Relationship
+            modelBuilder.Entity<Purchase>().HasOne(p => p.User)
+                .WithMany()
+                .HasForeignKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
+
