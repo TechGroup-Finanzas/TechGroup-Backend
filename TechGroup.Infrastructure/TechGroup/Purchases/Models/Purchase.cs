@@ -1,4 +1,5 @@
-﻿using TechGroup.Infrastructure.TechGroup.Users.Models;
+﻿
+using TechGroup.Infrastructure.TechGroup.Users.Models;
 
 namespace TechGroup.Infrastructure.TechGroup.Purchases.Models;
 
@@ -13,4 +14,10 @@ public class Purchase
     public string Status { get; set; }
     
     public User User { get; set; }
+    public ICollection<PurchasesProducts.Models.PurchasesProducts> PurchaseProducts { get; set; } // Relación muchos a muchos con Productos
+
+    public Purchase()
+    {
+        PurchaseProducts = new HashSet<PurchasesProducts.Models.PurchasesProducts>();
+    }
 }
