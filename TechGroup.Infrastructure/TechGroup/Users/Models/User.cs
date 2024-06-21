@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechGroup.Infrastructure.TechGroup.Purchases.Models;
 
 namespace TechGroup.Infrastructure.TechGroup.Users.Models
 {
@@ -15,5 +16,7 @@ namespace TechGroup.Infrastructure.TechGroup.Users.Models
         public required string Password { get; set; }
         public required string Dni { get; set; }
         public DateOnly CreatedAt { get; set; }
+        
+        public ICollection<Purchase> Purchases { get; set; }
     }
 }
