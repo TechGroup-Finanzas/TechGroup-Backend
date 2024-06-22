@@ -5,6 +5,7 @@ using TechGroup.Infrastructure.TechGroup.Answers.Models;
 using TechGroup.Infrastructure.TechGroup.Products.Models;
 using TechGroup.Infrastructure.TechGroup.Questions.Models;
 using TechGroup.Infrastructure.TechGroup.Users.Models;
+using TechGroup.Infrastructure.TechGroup.Customers.Models;
 
 namespace TechGroup.Infrastructure.Context
 {
@@ -20,6 +21,8 @@ namespace TechGroup.Infrastructure.Context
         public DbSet<Question> Question { get; set; }
         
         public DbSet<Answer> Answer { get; set; }
+
+        public DbSet<Customer> Customer {get;set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -85,6 +88,29 @@ namespace TechGroup.Infrastructure.Context
                 .OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Answer>().Navigation(a => a.Question).AutoInclude();
             modelBuilder.Entity<Answer>().Property(a => a.CreatedAt).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
+
+            modelBuilder.Entity<Customer>().ToTable("customers");
+            modelBuilder.Entity<Customer>().HasKey(c => c.Id);
+            modelBuilder.Entity<Customer>().Property(c => c.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Customer>().HasOne(c => c.User)
+                .WithOne(u => u.User)
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Customer>().Property(c => c.Name).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.LastName).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.Dni).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.birthdate).IsRequired();
+            modelBuilder.Entity<Customer>().Property(c => c.phone).IsRequired().HasMaxLength(15);
+            modelBuilder.Entity<Customer>().Property(c => c.Email).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.rate_type).IsRequired().HasMaxLength(30);
+            modelBuilder.Entity<Customer>().Property(c => c.capitalization).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.rate).IsRequired();
+            modelBuilder.Entity<Customer>().Property(c => c.period).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.limit).IsRequired();
+            modelBuilder.Entity<Customer>().Property(c => c.status).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.payment_date).IsRequired();
+            modelBuilder.Entity<Customer>().Navigation(c => c.Customer).AutoInclude();
+            
             
         }
     }
