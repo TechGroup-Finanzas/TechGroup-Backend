@@ -1,4 +1,5 @@
 ﻿using TechGroup.Infrastructure.TechGroup.Customers.Models;
+using TechGroup.Infrastructure.TechGroup.Users.Models;
 namespace TechGroup.API.TechGroup.Customers.Response
 {
     public class CustResponse
