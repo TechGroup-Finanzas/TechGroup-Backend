@@ -59,21 +59,20 @@ namespace TechGroup.Infrastructure.TechGroup.Customers.Services
             {
                 throw new Exception("Customer not found");
             }
-            custToUpdate.id_user=cust.id_user;
-            custToUpdate.name = cust.name;
-            custToUpdate.lastname = cust.lastname;
+            custToUpdate.User_id=cust.User_id;
+            custToUpdate.Name = cust.Name;
+            custToUpdate.Lastname = cust.Lastname;
             custToUpdate.Dni = cust.Dni;
-            custToUpdate.birthdate=cust.birthdate;
-            custToUpdate.phone=cust.phone;
-            custToUpdate.email = cust.email;
-            custToUpdate.rate_type=cust.rate_type;
-            custToUpdate.capitalization=cust.capitalization;
-            custToUpdate.rate=cust.rate;
-            custToUpdate.period=cust.period;
-            custToUpdate.limit=cust.limit;
-            custToUpdate.status=cust.status;
-            custToUpdate.payment_date=cust.payment_date;
-
+            custToUpdate.Birthdate=cust.Birthdate;
+            custToUpdate.Phone=cust.Phone;
+            custToUpdate.Email = cust.Email;
+            custToUpdate.Rate_type=cust.Rate_type;
+            custToUpdate.Capitalization=cust.Capitalization;
+            custToUpdate.Rate=cust.Rate;
+            custToUpdate.Period=cust.Period;
+            custToUpdate.Limit=cust.Limit;
+            custToUpdate.Status=cust.Status;
+            custToUpdate.Payment_date=cust.Payment_date;
 
 
             await techGroupDbContext.SaveChangesAsync();

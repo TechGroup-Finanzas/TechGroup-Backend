@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechGroup.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e68a75b28430e369a8d2f3b6058c507ec385f963")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00c5af6949e477ae206ec51c582e164e1a7f9cd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechGroup.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechGroup.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

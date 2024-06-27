@@ -21,6 +21,10 @@ using TechGroup.Infrastructure.TechGroup.Users.Interfaces;
 using TechGroup.Infrastructure.TechGroup.Users.Services;
 using TechGroup.Infrastructure.TechGroup.Customers.Interfaces;
 using TechGroup.Infrastructure.TechGroup.Customers.Services;
+using TechGroup.Infrastructure.TechGroup.Payplans.Interfaces;
+using TechGroup.Infrastructure.TechGroup.Payplans.Services;
+using TechGroup.Infrastructure.TechGroup.Purchases.Services;
+using TechGroup.Infrastructure.TechGroup.Purchases.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +51,10 @@ builder.Services.AddScoped<IQuestionDomain, QuestionDomain>();
 
 builder.Services.AddScoped<ICustInfrastructure, CustInfrastructure>();
 builder.Services.AddScoped<ICustDomain, CustDomain>();
+
+builder.Services.AddScoped<IPayplanInfrastructure, PayplanInfrastructure>();
+builder.Services.AddScoped<IPurchaseInfrastructure, PurchaseInfrastructure>();
+
 
 //cors
 builder.Services.AddCors(p =>
@@ -75,7 +83,7 @@ builder.Services.AddDbContext<TechGroupDbContext>(
             ServerVersion.AutoDetect(connectionString),
             options => options.EnableRetryOnFailure(
                 maxRetryCount: 5,
-                maxRetryDelay: System.TimeSpan.FromSeconds(30),
+                maxRetryDelay: System.TimeSpan.FromSeconds(60),
                 errorNumbersToAdd: null)
         );
     });
