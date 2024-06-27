@@ -6,6 +6,8 @@ using TechGroup.Infrastructure.TechGroup.Products.Models;
 using TechGroup.Infrastructure.TechGroup.Questions.Models;
 using TechGroup.Infrastructure.TechGroup.Users.Models;
 using TechGroup.Infrastructure.TechGroup.Customers.Models;
+using TechGroup.Infrastructure.TechGroup.Payplans.Models;
+using TechGroup.Infrastructure.TechGroup.Purchases.Models;
 
 namespace TechGroup.Infrastructure.Context
 {
@@ -23,13 +25,15 @@ namespace TechGroup.Infrastructure.Context
         public DbSet<Answer> Answer { get; set; }
 
         public DbSet<Customer> Customer {get;set;}
+        public DbSet<Payplan> Payplan { get;set;}
+        public DbSet<Purchase> Purchase { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
-                optionsBuilder.UseMySql("Server=localhost,3306;Uid=root;Pwd=root1234;Database=TechGroupDb", serverVersion);
+                optionsBuilder.UseMySql("server=roundhouse.proxy.rlwy.net;port=45071;user=root;password=TLvElcYbTCBgaopJcuGHMXpHLWxccESh;database=railway", serverVersion);
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -56,6 +60,10 @@ namespace TechGroup.Infrastructure.Context
             modelBuilder.Entity<User>().Property(u => u.Password).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<User>().Property(u => u.Dni).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<User>().Property(u => u.CreatedAt).IsRequired().HasDefaultValue(DateOnly.FromDateTime(DateTime.UtcNow));
+            modelBuilder.Entity<User>().Property(u => u.Birthday).IsRequired();
+            modelBuilder.Entity<User>().Property(u => u.Phone).IsRequired();
+            modelBuilder.Entity<User>().Property(u => u.Photo).IsRequired();
+            modelBuilder.Entity<User>().Property(u => u.Mora).IsRequired();
             
             modelBuilder.Entity<Product>().ToTable("product");
             modelBuilder.Entity<Product>().HasKey(p => p.Id);
@@ -92,26 +100,46 @@ namespace TechGroup.Infrastructure.Context
             modelBuilder.Entity<Customer>().ToTable("customers");
             modelBuilder.Entity<Customer>().HasKey(c => c.Id);
             modelBuilder.Entity<Customer>().Property(c => c.Id).IsRequired().ValueGeneratedOnAdd();
-            modelBuilder.Entity<Customer>().HasOne(c => c.User)
-                .WithOne(u => u.User)
-                .HasForeignKey(c => c.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Customer>().Property(c => c.User_id).IsRequired();
             modelBuilder.Entity<Customer>().Property(c => c.Name).IsRequired().HasMaxLength(100);
-            modelBuilder.Entity<Customer>().Property(c => c.LastName).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.Lastname).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<Customer>().Property(c => c.Dni).IsRequired().HasMaxLength(100);
-            modelBuilder.Entity<Customer>().Property(c => c.birthdate).IsRequired();
-            modelBuilder.Entity<Customer>().Property(c => c.phone).IsRequired().HasMaxLength(15);
+            modelBuilder.Entity<Customer>().Property(c => c.Birthdate).IsRequired();
+            modelBuilder.Entity<Customer>().Property(c => c.Phone).IsRequired().HasMaxLength(15);
             modelBuilder.Entity<Customer>().Property(c => c.Email).IsRequired().HasMaxLength(100);
-            modelBuilder.Entity<Customer>().Property(c => c.rate_type).IsRequired().HasMaxLength(30);
-            modelBuilder.Entity<Customer>().Property(c => c.capitalization).IsRequired().HasMaxLength(100);
-            modelBuilder.Entity<Customer>().Property(c => c.rate).IsRequired();
-            modelBuilder.Entity<Customer>().Property(c => c.period).IsRequired().HasMaxLength(100);
-            modelBuilder.Entity<Customer>().Property(c => c.limit).IsRequired();
-            modelBuilder.Entity<Customer>().Property(c => c.status).IsRequired().HasMaxLength(100);
-            modelBuilder.Entity<Customer>().Property(c => c.payment_date).IsRequired();
-            modelBuilder.Entity<Customer>().Navigation(c => c.Customer).AutoInclude();
-            
-            
+            modelBuilder.Entity<Customer>().Property(c => c.Rate_type).IsRequired().HasMaxLength(30);
+            modelBuilder.Entity<Customer>().Property(c => c.Capitalization).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.Rate).IsRequired();
+            modelBuilder.Entity<Customer>().Property(c => c.Period).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.Limit).IsRequired();
+            modelBuilder.Entity<Customer>().Property(c => c.Status).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Customer>().Property(c => c.Payment_date).IsRequired();
+
+            modelBuilder.Entity<Payplan>().ToTable("payplans");
+            modelBuilder.Entity<Payplan>().HasKey(p => p.Id);
+            modelBuilder.Entity<Payplan>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Payplan>().Property(p => p.Id_customer).IsRequired();
+            modelBuilder.Entity<Payplan>().Property(p => p.Amount).IsRequired();
+            modelBuilder.Entity<Payplan>().Property(p => p.Monthlyrate).IsRequired();
+            modelBuilder.Entity<Payplan>().Property(p => p.Number_of_payments).IsRequired();
+            modelBuilder.Entity<Payplan>().Property(p => p.Grace_periods).IsRequired();
+            modelBuilder.Entity<Payplan>().Property(p => p.Grace_type).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Payplan>().Property(p => p.Date_register).IsRequired();
+            modelBuilder.Entity<Payplan>().Property(p => p.Status).IsRequired().HasMaxLength(100);
+
+
+            modelBuilder.Entity<Purchase>().ToTable("purchases");
+            modelBuilder.Entity<Purchase>().HasKey(p => p.Id);
+            modelBuilder.Entity<Purchase>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Purchase>().Property(p => p.Id_customer).IsRequired();
+            modelBuilder.Entity<Purchase>().Property(p => p.Product_name).IsRequired().HasMaxLength(100);
+            modelBuilder.Entity<Purchase>().Property(p => p.Price).IsRequired().HasPrecision(2);
+            modelBuilder.Entity<Purchase>().Property(p => p.Amount).IsRequired();
+            modelBuilder.Entity<Purchase>().Property(p => p.Date_register).IsRequired();
+            modelBuilder.Entity<Purchase>().Property(p => p.Interest).IsRequired();
+            modelBuilder.Entity<Purchase>().Property(p => p.Status).IsRequired().HasMaxLength(100); 
+
+
         }
     }
 }
