@@ -50,7 +50,17 @@ namespace TechGroup.Infrastructure.TechGroup.Purchases.Services
 
         public async Task<bool> UpdateAsync(int id, Purchase purchase)
         {
-            _context.Purchase.Update(purchase);
+            var purchaseToUpdate = await _context.Purchase.FirstOrDefaultAsync(x => x.Id == id);
+            if (purchaseToUpdate == null)
+                throw new Exception("Purchase not found");
+            purchaseToUpdate.Id_customer = purchase.Id_customer;
+            purchaseToUpdate.Product_name = purchase.Product_name;
+            purchaseToUpdate.Price = purchase.Price;
+            purchaseToUpdate.Amount = purchase.Amount;
+            purchaseToUpdate.Date_register = purchase.Date_register;
+            purchaseToUpdate.Interest = purchase.Interest;
+            purchaseToUpdate.Status = purchase.Status;
+
             await _context.SaveChangesAsync();
             return true;
         }

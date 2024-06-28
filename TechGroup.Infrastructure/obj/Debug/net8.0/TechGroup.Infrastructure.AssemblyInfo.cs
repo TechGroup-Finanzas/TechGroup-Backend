@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechGroup.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00c5af6949e477ae206ec51c582e164e1a7f9cd4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ceb964c7d20532cfb426ea26cc87ff346766fc2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechGroup.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechGroup.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
